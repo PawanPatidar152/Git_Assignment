@@ -1,0 +1,40 @@
+1. What is the difference between git pull and git fetch?
+Answer:-
+git fetch only downloads new data from a remote repository, but it doesn’t integrate any
+of the downloaded data into your working files. All it does is provide a view of this data.
+git pull downloads as well as merges the data from a remote repository into your local
+working files. It may also lead to merge conflicts if your local changes are not yet
+committed. Use the git stash command to hide your local changes.
+2. Write the command to create a new branch ‘feature/worker’?
+Answer:-
+git checkout -b feature/worker
+3. There are some local changes in file server.js in branch feature/server? Write all the
+commands required to put the changes in the github repo with remote origin in local.
+Answer:-
+git add . or git add server.js
+git commit -m”Some message”
+git push origin feature/server
+4. You are working in file index.js. Suddenly, your manager gives you a bug to fix on
+priority. Which command will you use to save your current work in your local? Which
+command will you use to retrieve the same work?
+Answer:-
+git stash
+git pop
+5. Which command is used to see all the local branches in git?
+Answer:-
+git branch
+6. Which command is used to see all the previous commits in a branch?
+git log
+7. What is the use of git status command?
+Answer:-
+The git status command displays the state of the working directory and the staging area.
+It lets you see which changes have been staged, which haven't, and which files aren't
+being tracked by Git.
+8. Write a linux command to see the names of folders and file in the current folder?
+Answer:- ls
+9. Write a command to see the previously used linux commands?
+Answer:- history
+10. What is the difference between git rebase and git merge?
+Answer:-When you #rebase your branch onto their branch, you tell Git to make it look as though you checked out their branch cleanly, then did all your work starting from there. That makes a clean, conceptually simple package of changes that someone can review. You can repeat this process again when there are new changes on their branch, and you will always end up with a clean set of changes "on the tip" of their branch.
+
+When you #merge their branch into your branch, you tie the two branch histories together at this point. If you do this again later with more changes, you begin to create an interleaved thread of histories: some of their changes, some of my changes, some of their changes. Some people find this messy or undesirable.
